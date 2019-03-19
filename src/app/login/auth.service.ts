@@ -5,6 +5,7 @@ import { UsuarioLogin } from './login.model';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Usuario } from '../registro/registro.model';
+import { API } from '../API';
 
 @Injectable()
 export class AuthService{
@@ -17,7 +18,7 @@ export class AuthService{
   }
 
   login(usuario:Usuario):Observable<Usuario>{
-    return this.http.post<Usuario>(`http://localhost:3000/auth`,usuario).pipe(
+    return this.http.post<Usuario>(`${API}/auth`,usuario).pipe(
       map(result => {
         this.usuarioLogado = result;
         this.isLoggedFlag = true;

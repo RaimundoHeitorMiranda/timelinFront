@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Acontecimento } from './time.model';
 import { AuthService } from '../login/auth.service';
+import { API } from '../API';
 
 
 @Injectable()
@@ -15,15 +16,15 @@ export class AcontecimentoService{
 
   adicionar(acontecimento:Acontecimento):Observable<Acontecimento>{
     acontecimento.userId = this.authService.usuarioLogado.id;
-    return this.http.post<Acontecimento>(`http://localhost:3000/acontecimento`,acontecimento);
+    return this.http.post<Acontecimento>(`${API}/acontecimento`,acontecimento);
   }
 
   buscar():Observable<Acontecimento[]>{
-    return this.http.get<Acontecimento[]>(`http://localhost:3000/users/${this.authService.usuarioLogado.id}/acontecimento`);
+    return this.http.get<Acontecimento[]>(`${API}/users/${this.authService.usuarioLogado.id}/acontecimento`);
   }
 
   deletar(id:number):Observable<any>{
-    return this.http.delete(`http://localhost:3000/acontecimento/${id}`);
+    return this.http.delete(`${API}/acontecimento/${id}`);
   }
 
 }

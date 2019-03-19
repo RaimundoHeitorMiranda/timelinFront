@@ -37,15 +37,21 @@ export class TimeLineComponent implements OnInit {
 
     // quando o dialog fechar atualiza a lista de acontecimentos
     dialogRef.afterClosed().subscribe(result => {
-      this.ngOnInit();
+      // espera por 1 segundo
+      setTimeout(()=>{
+        this.ngOnInit();
+      },1000);
     });
   }
 
   // método que é chamado quando um acontecimento é deletado
   acontecimentoDeletado(flag: boolean) {
     if(flag){
-      // atualiza  a lista de acontecimentos
-      this.ngOnInit();
+      // atualiza  a lista de acontecimentos apoós um segundo
+      setTimeout(()=>{
+        this.ngOnInit();
+      },1000);
+
     }
   }
 

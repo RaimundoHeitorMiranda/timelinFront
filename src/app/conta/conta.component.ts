@@ -10,7 +10,7 @@ import { ContaService } from './conta.service';
 })
 export class ContaComponent implements OnInit {
 
-  // Usuário para cadastro
+  // Usuário para atualização
   usuario:Usuario = new Usuario();
 
   // Senha de confirmação
@@ -26,7 +26,7 @@ export class ContaComponent implements OnInit {
               private contaService:ContaService) { }
 
   ngOnInit() {
-    console.log(this.authService.usuarioLogado)
+    // busca o usuário logado no sistema para poder alterar seus dados
     this.usuario = this.authService.usuarioLogado;
   }
 
@@ -42,11 +42,13 @@ export class ContaComponent implements OnInit {
 
   // Verifica se o email é válido
   verficiaEmail():boolean{
+    // email é undefined?
     if(this.usuario.email == undefined){
       this.erroMenssage = "Agora um Email"
       return false;
     }
 
+    // email possui '@'?
     if(this.usuario.email.indexOf('@') == -1){
       this.erroMenssage = "Email Inválido."
       return false;
@@ -82,7 +84,6 @@ export class ContaComponent implements OnInit {
   }
 
   atualizar(){
-    console.log("111")
     this.contaService.atualizar(this.usuario).subscribe();
   }
 

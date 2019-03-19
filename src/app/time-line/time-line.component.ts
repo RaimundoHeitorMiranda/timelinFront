@@ -12,33 +12,39 @@ import { Acontecimento } from './time.model';
 })
 export class TimeLineComponent implements OnInit {
 
+  // Lista de acontecimentos
   acontecimentos:Acontecimento[] = [];
-  color:any ={'background-color':'green'};
+
+  // color:any ={'background-color':'green'};
 
   constructor(public dialog: MatDialog,
               private acontecimentoService:AcontecimentoService) { }
 
   ngOnInit() {
+    // ao inciar o component buscar todos os acontecimentos do usuário
     this.acontecimentoService.buscar().subscribe(result =>{
-      console.log(this.acontecimentos)
       this.acontecimentos = result;
     })
   }
 
+  // Método que exibe o modal(dialog) para adicionar um acontecimento
   AdicionarDialog(): void {
+    // abrindo o dialog
     const dialogRef = this.dialog.open(AdicionarComponent, {
       width: '1000px',
       data: {}
     });
 
+    // quando o dialog fechar atualiza a lista de acontecimentos
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       this.ngOnInit();
     });
   }
 
+  // método que é chamado quando um acontecimento é deletado
   acontecimentoDeletado(flag: boolean) {
     if(flag){
+      // atualiza  a lista de acontecimentos
       this.ngOnInit();
     }
   }

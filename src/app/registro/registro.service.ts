@@ -8,9 +8,11 @@ import { API } from '../API';
 export class RegistroService{
 
   constructor(private http:HttpClient){
-
   }
 
+  /* Método que efetua o registro no sistema
+    recebe um usuário e o envia ao servidor
+  */
   registrar(usuario:Usuario):Observable<Usuario>{
     return this.http.post<Usuario>(`${API}/users`,usuario);
   }

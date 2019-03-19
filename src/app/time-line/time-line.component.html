@@ -2,6 +2,7 @@
   <div class="container-fluid">
     <div class="row">
 
+      <!-- div que mostra o acontecimento -->
       <div class="col-12" *ngFor="let acontecimento of acontecimentos">
         <app-acontecimento [acontecimento]="acontecimento" (acontecimentoDeletado)="acontecimentoDeletado($event)" ></app-acontecimento>
       </div>

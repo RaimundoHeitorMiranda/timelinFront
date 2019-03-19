@@ -1,13 +1,37 @@
 .sobre-container{
   height: 100%;
-  display: flex;
   margin: 0 10% 0 10%;
 }
 
 .sobre-descricao{
   height: 10%;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-h1{
+.sobre-img{
+  height: 250px;
+  margin: 0 5px 15px 0;
+  background-color: rgb(244, 235, 255);
+
+}
+
+.sobre-coment{
+  height: 250px;
+  background-color: rgb(244, 235, 255);
+  padding-top: 10%;
+}
+
+.col-12{
+  margin-bottom: 30px;
+}
+
+img{
+  height: 250px;
+  width: 100%;
+  border-radius: 0.9rem;
+}
+
+h3,p{
   text-align: center;
 }

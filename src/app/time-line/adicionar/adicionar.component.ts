@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/login/auth.service';
 })
 export class AdicionarComponent implements OnInit {
 
+  // Acontecimento que será adicionado
   acontecimento:Acontecimento = new Acontecimento();
 
   constructor(public dialogRef: MatDialogRef<AdicionarComponent>,
@@ -20,19 +21,22 @@ export class AdicionarComponent implements OnInit {
   }
 
   ngOnInit() {
+    // quando iniciado, seta o id do usuário para o id do usuário logado
     this.acontecimento.userId = this.authService.usuarioLogado.id;
   }
 
 
+  // se clicar fora, fecha o dialog
   onNoClick(): void {
     this.dialogRef.close();
   }
 
+  // adicionar o acontecimento
   adicionar(){
     this.acontecimentoService.adicionar(this.acontecimento).subscribe(result=>{
-      console.log("resutado",result)
-      this.dialogRef.close();
     })
+    // fecha o dialog
+    this.dialogRef.close();
   }
 
 }

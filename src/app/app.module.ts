@@ -32,13 +32,13 @@ import { TimeLineComponent } from './time-line/time-line.component';
 import { DeletarConfirmDialog } from './time-line/acontecimento/acontecimento.component';
 import { ContaComponent } from './conta/conta.component';
 import { AdicionarComponent } from './time-line/adicionar/adicionar.component'
+import { AcontecimentoComponent } from './time-line/acontecimento/acontecimento.component'
 
 // Servicos
 import { RegistroService } from './registro/registro.service';
 import { AuthService } from './login/auth.service';
 import { ContaService } from './conta/conta.service';
 import { AcontecimentoService } from './time-line/time.service';
-import { AcontecimentoComponent } from './time-line/acontecimento/acontecimento.component'
 
 @NgModule({
   declarations: [

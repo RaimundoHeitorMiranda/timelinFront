@@ -9,10 +9,13 @@ import { Usuario } from '../registro/registro.model';
 })
 export class LoginComponent implements OnInit {
 
+  // usuário que representará o login
   usuario:Usuario = new Usuario();
 
+  // mensagem caso exista algum erro de login
   erroLogin:any;
 
+  // auth necessário para efetuar o login
   constructor(private authService:AuthService) { }
 
   ngOnInit() {

@@ -2,9 +2,10 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-2">
+      <!-- div necessária para centralizar a div principal -->
+      <div class="col-2"></div>
 
-      </div>
+      <!-- div principal -->
       <div class="col-8">
         <div class="card">
           <form>
@@ -19,15 +20,15 @@
             </div>
             <div class="form-group col-12">
               <label for="email">Email:</label>
-              <input type="text" [(ngModel)]="usuario.email" class="form-control" name="nome" id="email">
+              <input type="text" [(ngModel)]="usuario.email" class="form-control" name="email" id="email">
             </div>
             <div class="form-group col-12">
               <label for="senha">Senha:</label>
-              <input type="password" [(ngModel)]="usuario.senha" class="form-control" name="nome" id="senha">
+              <input type="password" [(ngModel)]="usuario.senha" class="form-control" name="senha" id="senha">
             </div>
             <div class="form-group col-12">
               <label for="senhaconf">Confrime Senha:</label>
-              <input type="password" [(ngModel)]="senhaConf" class="form-control" name="nome" id="senhaconf">
+              <input type="password" [(ngModel)]="senhaConf" class="form-control" name="senhaConf" id="senhaconf">
             </div>
             <div class="form-group col-12">
               <p *ngIf="!verificaCampos()"> {{erroMenssage}}</p>
@@ -37,9 +38,9 @@
           </form>
         </div>
       </div>
-      <div class="col-2">
 
-      </div>
+      <!-- div necessária para centralizar a div principal -->
+      <div class="col-2"></div>
 
     </div>
   </div>

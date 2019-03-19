@@ -16,5 +16,4 @@ export const APP_ROUTES: Routes = [
   { path:'login',component: LoginComponent},
   { path:'time',component: TimeLineComponent},
   { path:'conta',component: ContaComponent},
-
 ]

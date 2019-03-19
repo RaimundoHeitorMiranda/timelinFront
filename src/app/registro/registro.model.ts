@@ -1,4 +1,4 @@
-// Interface que representa o usuário que efetuará o registro
+// classe que representa o usuário que do sistema
 export class Usuario{
   id:number;
   nome:string;
@@ -6,7 +6,6 @@ export class Usuario{
   senha:string;
 
   constructor(){
-    
   }
 
 }

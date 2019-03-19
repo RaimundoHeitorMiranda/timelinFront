@@ -8,6 +8,7 @@ import { AuthService } from '../login/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
+  // auth necessário para saber se existe alguém logado ou não
   constructor(public authService:AuthService) { }
 
   ngOnInit() {

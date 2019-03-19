@@ -40,11 +40,13 @@ export class RegistroComponent implements OnInit {
 
   // Verifica se o email é válido
   verficiaEmail():boolean{
+    // email é undefined?
     if(this.usuario.email == undefined){
       this.erroMenssage = "Agora um Email"
       return false;
     }
 
+    // email contem '@'?
     if(this.usuario.email.indexOf('@') == -1){
       this.erroMenssage = "Email Inválido."
       return false;
@@ -78,14 +80,14 @@ export class RegistroComponent implements OnInit {
   registrar(){
     this.registroService.registrar(this.usuario).subscribe(
       result =>{
-        console.log(result);
         this.usuario = result;
       },
       err => {
-        console.log(err);
         this.errorRegistro = err.error;
       },
       ()=>{
+        // se o registro for efetuado com sucesso,
+        // redireciona para a pg de login
         this.router.navigate(['/login'])
       }
     )

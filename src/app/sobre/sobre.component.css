@@ -1,0 +1,13 @@
+.sobre-container{
+  height: 100%;
+  display: flex;
+  margin: 0 10% 0 10%;
+}
+
+.sobre-descricao{
+  height: 10%;
+}
+
+h1{
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+<!-- Card com uma História -->
+<div class="time-card" [ngStyle]="cor(acontecimento)" >
+    <div class="time-card-header" (click)="show = !show">
+      <div class="time-card-nome">
+        {{acontecimento.nome}}
+      </div>
+      <div class="time-card-data">
+        {{formatData()}}
+      </div>
+    </div>
+    <div *ngIf="show">
+      <div class="time-card-body">
+        {{acontecimento.descricao}}
+      </div>
+      <div class="time-card-footer">
+        <button type="button" class="time-card-button-excluir" (click)="DeletarDialog()">Excluir</button>
+      </div>
+    </div>
+</div>

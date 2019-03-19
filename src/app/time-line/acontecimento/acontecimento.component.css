@@ -1,0 +1,57 @@
+.time-card{
+  width: 100%;
+  border-radius: 1rem;
+  background-color: rgb(124, 84, 235);
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.time-card-header{
+  display: flex;
+  flex-direction: row;
+  font-size: 26px;
+  border: 1px;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+}
+
+.time-card-nome{
+  margin-left: 5px;
+  flex-grow: 1;
+}
+
+.time-card-data{
+  margin-right: 5px;
+  text-align: right;
+
+}
+
+.time-card-body{
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 18px;
+  min-height: 150px;
+}
+
+.time-card-footer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.time-card-button-cor{
+  width: 60px;
+  background-color: rgb(42, 201, 246);
+  border-radius: 1rem;
+}
+
+.time-card-button-excluir{
+  width: 60px;
+  background-color: rgb(223, 70, 70);
+  border-radius: 1rem;
+}
+
+button{
+  margin-right: 3px;
+  margin-bottom:3px;
+}

@@ -1,0 +1,33 @@
+.clientes-container{
+  height: 100%;
+  margin: 0 10% 0 10%;
+}
+
+.clientes-descricao{
+  height: 10%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cliente-img{
+  height: 250px;
+  margin: 0 5px 15px 0;
+  background-color: rgb(244, 235, 255);
+
+}
+
+.cliente-coment{
+  height: 250px;
+  background-color: rgb(244, 235, 255);
+  padding-top: 10%;
+}
+
+img{
+  height: 250px;
+  width: 100%;
+  border-radius: 99rem;
+}
+
+h3,p{
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+<div class="time-container">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-12" *ngFor="let acontecimento of acontecimentos">
+        <app-acontecimento [acontecimento]="acontecimento" (acontecimentoDeletado)="acontecimentoDeletado($event)" ></app-acontecimento>
+      </div>
+
+      <div class="button-add">
+        <button mat-fab class="button-add-color" (click)="AdicionarDialog()">+</button>
+      </div>
+
+    </div>
+  </div>
+</div>

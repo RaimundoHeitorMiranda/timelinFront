@@ -1,0 +1,50 @@
+<div class="conta-container">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-2">
+
+      </div>
+      <div class="col-8">
+        <div class="card">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-12">
+                <h1>Conta</h1>
+              </div>
+            </div>
+            <div class="form-group col-12">
+              <label for="nome">Nome: {{usuario.nome}}</label>
+              <input type="text" [(ngModel)]="usuario.nome" value="Digite o novo Nome" class="form-control" name="nome" id="nome">
+            </div>
+            <div class="form-group col-12">
+              <label for="email">Email: {{usuario.email}}</label>
+              <input type="text" [(ngModel)]="usuario.email" value="Digite o novo email" class="form-control" name="email" id="email">
+            </div>
+            <section class="example-section">
+             <mat-checkbox class="example-margin" [(ngModel)]="mudarSenhaFlag" name="senhaflag">Alterar Senha?</mat-checkbox>
+            </section>
+            <div *ngIf="mudarSenhaFlag" >
+              <div class="form-group col-12">
+                <label for="senha">Nova Senha:</label>
+                <input type="password" [(ngModel)]="usuario.senha" class="form-control" name="senha" id="senha">
+              </div>
+              <div class="form-group col-12">
+                <label for="senhaconf">Confrime a Senha:</label>
+                <input type="password" [(ngModel)]="senhaConf" class="form-control" name="senhaconf" id="senhaconf">
+              </div>
+            </div>
+            <div class="form-group col-12">
+              <p *ngIf="!verificaCampos()"> {{erroMenssage}}</p>
+              <button *ngIf="verificaCampos()" type="button" name="button" (click)="atualizar()">Atualizar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-2">
+
+      </div>
+
+    </div>
+  </div>
+</div>

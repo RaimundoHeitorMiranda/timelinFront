@@ -1,0 +1,27 @@
+<div class="header-container">
+  <!-- Logo -->
+  <div class="header-logo">
+    <a [routerLink]="['/sobre']">
+      <h1>TimeLine</h1>
+    </a>
+  </div>
+
+  <!-- Linda do tempo -->
+  <div class="header-linha-tempo">
+    <a *ngIf="authService.isLoggedFlag" [routerLink]="['/time']">
+      <h3>Linha do Tempo</h3>
+    </a>
+  </div>
+
+  <!-- Opções e contato -->
+  <div class="header-opcoes">
+    <a [routerLink]="['/clientes']">Clientes</a>
+    <a [routerLink]="['/sobre']">Sobre</a>
+    <a [routerLink]="['/contato']">Contato</a>
+    <a *ngIf="authService.isLoggedFlag" [routerLink]="['/conta']">Conta</a>
+    <a *ngIf="authService.isLoggedFlag" [routerLink]="['/login']" (click)="logout()">Sair</a>
+    <a *ngIf="!authService.isLoggedFlag" [routerLink]="['/registro']">Registro</a>
+    <a *ngIf="!authService.isLoggedFlag" [routerLink]="['/login']">Entrar</a>
+  </div>
+
+</div>

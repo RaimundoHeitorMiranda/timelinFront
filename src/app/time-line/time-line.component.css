@@ -1,0 +1,21 @@
+.time-container{
+  margin: 0 15px 0 15px;
+}
+
+button{
+  margin-right: 3px;
+  margin-bottom:3px;
+}
+
+.button-add{
+  position: fixed;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  right: 0;
+  bottom: 0;
+}
+
+.button-add-color{
+  background-color: rgb(4, 22, 97);
+  font-size: 30px;
+}

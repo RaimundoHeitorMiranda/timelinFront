@@ -1,0 +1,28 @@
+<div class="adicionar-container">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-12">
+        <h1>Adicionar Momento</h1>
+      </div>
+    </div>
+    <div class="form-group col-12">
+      <label for="nome">Nome:</label>
+      <input type="text" [(ngModel)]="acontecimento.nome" class="form-control" name="nome" id="nome">
+    </div>
+    <div class="form-group col-12">
+      <label for="email">Data:</label>
+      <input type="date" [(ngModel)]="acontecimento.data" class="form-control" name="nome" id="email">
+    </div>
+    <div class="form-group col-12">
+      <label for="senha">Descrição:</label>
+      <textarea name="descricao" rows="8" [(ngModel)]="acontecimento.descricao"></textarea>
+    </div>
+    <div class="form-group col-12">
+      <label for="cor">Cor:</label>
+      <input id="cor" [(colorPicker)]="acontecimento.cor" [style.background]="acontecimento.cor"/>
+    </div>
+    <div class="form-group col-12">
+      <button (click)="adicionar()" type="button" name="button">Adicionar</button>
+    </div>
+  </form>
+</div>
